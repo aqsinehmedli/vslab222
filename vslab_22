@@ -1,0 +1,23 @@
+def sum(arr):
+    # İlk mənfi ədəd tapılana qədər cəmi saxlamaq üçün bir dəyişən təyin et
+    total = 0
+    
+    # Massivin hər bir elementini yoxla
+    for element in arr:
+        # Əgər element mənfi ədəddirsə, cəmi qaytarmadan funksiyanı bitir
+        if element < 0:
+            break
+        
+        # Mənfi ədədəd olmadığı halda cəmi əlavə et
+        total += element
+    
+    return total
+
+# Massivi təyin et
+my_array = [3, 5, 8, -2, 7, 10, -4, 6]
+
+# Funksiyanı çağır və cəmi əldə et
+result = sum(my_array)
+
+# Nəticəni çap et
+print("Birinci mənfi ədəddən əvvəlki elementlərin cəmi:",result)
